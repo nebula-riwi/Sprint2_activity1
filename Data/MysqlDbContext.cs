@@ -9,6 +9,6 @@ public class MysqlDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)
         => options.UseMySql(
-            "Server=168.119.183.3;Database=andrescortes;User=root;Password=g0tIFJEQsKHm5$34Pxu1;Port=3307",
+            "Server=168.119.183.3;Database=tren_nebula;User=root;Password=g0tIFJEQsKHm5$34Pxu1;Port=3307",
             new MySqlServerVersion(new Version(8, 0, 0)));
 }
