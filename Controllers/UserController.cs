@@ -121,4 +121,14 @@ public class UserController
                 .ToList();
         }
     }
+    // Eliminar by Jhon
+    public void DeleteUser(User user)
+    {
+        using (var db = new MysqlDbContext())
+        {
+            db.users.Remove(user);
+            db.SaveChanges();
+        }
+    }
+
 }
