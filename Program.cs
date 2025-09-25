@@ -1,7 +1,4 @@
-﻿using Sprint2.Controllers;
+﻿using Sprint2.Classes;
 
-UserController User = new UserController();
-foreach (var user in User.Index())
-{
-  Console.WriteLine($"{user.Id} - {user.Name} - {user.Email}");
-}
+Delete delete = new Delete();
+delete.DeleteMenu();
