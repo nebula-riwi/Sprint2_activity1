@@ -51,9 +51,17 @@ public class Queries
             Console.WriteLine("Ingrese el id del usuario: ");
             int id = int.Parse(Console.ReadLine());
             var userId = User.GetById(id);
-            Console.WriteLine(
-              $"Id: {userId.Id} - Nombre: {userId.First_name} {userId.Last_name} - Username: {userId.Username} - Email: {userId.Email} - Phone: {userId.Phone} - CellPhone: {userId.Cellphone} - Address: {userId.Address} - City: {userId.City} - State: {userId.State} - Zipcode: {userId.Zipcode} - Country: {userId.Country} - Gender: {userId.Gender} - Age: {userId.Age}");
-            break;
+            if (userId == null)
+            {
+              Console.WriteLine("Usuario no encontrado");
+              break;
+            }
+            else
+            {
+              Console.WriteLine(
+                            $"Id: {userId.Id} - Nombre: {userId.First_name} {userId.Last_name} - Username: {userId.Username} - Email: {userId.Email} - Phone: {userId.Phone} - CellPhone: {userId.Cellphone} - Address: {userId.Address} - City: {userId.City} - State: {userId.State} - Zipcode: {userId.Zipcode} - Country: {userId.Country} - Gender: {userId.Gender} - Age: {userId.Age}");
+                          break;
+            }
           case "3":
             Console.Clear();
             Console.WriteLine("----Buscar usuario por Email----");

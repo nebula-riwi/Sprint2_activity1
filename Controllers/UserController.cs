@@ -20,7 +20,16 @@ public class UserController
     {
         using (var db = new MysqlDbContext())
         {
-            return db.users.Find(id);
+            User user = db.users.Find(id);
+            if (user != null)
+            {
+                return user;
+            }
+            else
+            {
+                return null;
+            }
+            
         }
     }
 
